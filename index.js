@@ -12,7 +12,7 @@ function sumSalaries(company) {
     return company.reduce((prev, current) => prev + current.salary, 0);
   } else {
     let sum = 0;
-    for (let subdepartment of Object.values(company)) {
+    for (const subdepartment of Object.values(company)) {
       sum += sumSalaries(subdepartment);
     }
     return sum;
